@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/backwi"
+        tools:context=".MainActivity">
+
+        <View
+            android:id="@+id/TopView"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:background="#9AFF0000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/Wave"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/ic_wave__2_"
+            android:hapticFeedbackEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TopView" />
+
+        <TextView
+            android:id="@+id/h1"
+            android:layout_width="285dp"
+            android:layout_height="67dp"
+            android:fontFamily="serif-monospace"
+            android:shadowColor="#000000"
+            android:text="Cardápio"
+            android:textColor="#FFFFFF"
+            android:textSize="50dp"
+            app:layout_constraintBottom_toBottomOf="@+id/TopView"
+            app:layout_constraintEnd_toEndOf="@+id/TopView"
+            app:layout_constraintHorizontal_bias="0.148"
+            app:layout_constraintStart_toStartOf="@+id/TopView"
+            app:layout_constraintTop_toTopOf="@+id/TopView"
+            app:layout_constraintVertical_bias="0.819" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="112dp"
+            android:layout_height="145dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="88dp"
+            app:layout_constraintBottom_toBottomOf="@+id/Wave"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/logo" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="250dp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Hamburguer"
+            android:layout_width="match_parent"
+            android:layout_height="144dp"
+            android:layout_marginTop="30dp"
+            android:layout_margin="15dp"
+            app:cardBackgroundColor="#287F7D7D"
+            app:cardCornerRadius="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Wave">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/hamburguer">
+
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="center_vertical|right"
+                android:orientation="vertical"
+                android:scrollbarSize="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="cursive"
+                    android:text="Hambueguers"
+                    android:textColor="#000000"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Massas"
+            android:layout_width="match_parent"
+            android:layout_height="144dp"
+            android:layout_margin="15dp"
+            android:layout_marginTop="30dp"
+            app:cardBackgroundColor="#287F7D7D"
+            app:cardCornerRadius="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Hamburguer"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                app:srcCompat="@drawable/massa" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="center_vertical|right"
+                android:orientation="vertical"
+                android:scrollbarSize="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="cursive"
+                    android:text="Massas"
+                    android:textColor="#000000"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView5"
+            android:layout_width="match_parent"
+            android:layout_height="144dp"
+            android:layout_margin="15dp"
+            android:layout_marginTop="30dp"
+            app:cardBackgroundColor="#287F7D7D"
+            app:cardCornerRadius="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Massas"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="15dp">
+
+            <ImageView
+
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                app:srcCompat="@drawable/sobremesa" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="center_vertical|right"
+                android:orientation="vertical"
+                android:scrollbarSize="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="cursive"
+                    android:text="Sobremesa"
+                    android:textColor="#000000"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Bebidas"
+            android:layout_width="match_parent"
+            android:layout_height="144dp"
+            android:layout_margin="15dp"
+            app:cardBackgroundColor="#287F7D7D"
+            app:cardCornerRadius="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView5"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="15dp">
+
+            <ImageView
+
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                app:srcCompat="@drawable/bebidas" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="center_vertical|right"
+                android:orientation="vertical"
+                android:scrollbarSize="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="cursive"
+                    android:text="Bebidas"
+                    android:textColor="#000000"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
